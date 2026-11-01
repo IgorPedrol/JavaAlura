@@ -1,0 +1,18 @@
+@startuml
+
+interface Comparable {
+    + compareTo(o: Object): int
+}
+
+class Compra {
+    - descricao: String
+    - value: double
+    + Compra(descricao: String, value: double)
+    + getValue(): double
+    + compareTo(outraCompra: Compra): int
+    + toString(): String
+}
+
+Comparable <|.. Compra
+
+@enduml
